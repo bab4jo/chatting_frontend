@@ -23,7 +23,7 @@ const ChattingRoomContainer = () => {
     console.log(`room Id:${no}`)
     console.log(client.current)
     client.current!.send(
-      '/pub/chat',
+      `/pub/chat`,
       {},
       JSON.stringify({
         chatRoomNo: no,
@@ -83,7 +83,7 @@ const ChattingRoomContainer = () => {
     // };
 // https://i10c111.p.ssafy/ws/chat
   const connectHandler = (mockId: string, mockName?: string) => {
-    const SockJs = SockJS('https://i10c111.p.ssafy:9000/ws/chat')
+    const SockJs = SockJS('http://localhost:8080/ws/chat')
     client.current = Stomp.over(() => SockJs)
     setChatMessageList([])
 
