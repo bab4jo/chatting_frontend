@@ -5,10 +5,12 @@ import MainContainer from "./container/MainContainer";
 import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./style/theme.";
 import { GlobalStyle } from "./style/GlobalStyles";
+import ResultContainer from "./container/ResultContainer";
 
 const AuthRoutes = () => (
   <Routes>
     <Route path="/" element={<MainContainer />} />
+    <Route path="/result" element={<ResultContainer />} />
     {/*<Route path="/chat" element={<ChattingContainer />} />*/}
     {/*<Route path="/chat/:no" element={<ChattingRoomContainer />} />*/}
   </Routes>

@@ -41,7 +41,7 @@ const MainContainer = () => {
 
   const navigate = useNavigate();
   const handleNextButtonClick = () => {
-    navigate("/mypage/findSimilarDog/result", { state: { resultData } });
+    navigate("/result", { state: { resultData } });
   };
 
   async function predict() {
