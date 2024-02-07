@@ -6,11 +6,13 @@ import { ThemeProvider } from "styled-components";
 import { lightTheme } from "./style/theme.";
 import { GlobalStyle } from "./style/GlobalStyles";
 import ResultContainer from "./container/ResultContainer";
+import InfoContainer from "./container/InfoContainer";
 
 const AuthRoutes = () => (
   <Routes>
     <Route path="/" element={<MainContainer />} />
     <Route path="/result" element={<ResultContainer />} />
+    <Route path="/info" element={<InfoContainer />} />
     {/*<Route path="/chat" element={<ChattingContainer />} />*/}
     {/*<Route path="/chat/:no" element={<ChattingRoomContainer />} />*/}
   </Routes>
