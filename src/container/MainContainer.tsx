@@ -180,7 +180,10 @@ const MainContainer = () => {
         </m.FindWrap>
       ) : (
         <m.DefaultWrap>
-          <m.Logo>PAWSITIVE</m.Logo>
+          <m.Logo>
+            나와 닮은 <br />
+            강아지 찾기!
+          </m.Logo>
           <m.StartButton
             type="button"
             onClick={() => {
