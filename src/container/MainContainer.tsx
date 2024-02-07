@@ -38,6 +38,7 @@ const MainContainer = () => {
   const [resultData, setResultData] = useState<
     { label: string; probability: number }[]
   >([]);
+  const [check, setCheck] = useState<boolean>(false);
 
   const navigate = useNavigate();
   const handleNextButtonClick = () => {
@@ -77,6 +78,11 @@ const MainContainer = () => {
     }));
     setResultData(updatedResultData);
   }
+
+  const onClickCamera = () => {
+    stop();
+    setCheck(true);
+  };
 
   async function loop() {
     if (isPredictingRef.current) {
@@ -156,7 +162,7 @@ const MainContainer = () => {
     <m.Container>
       {started ? (
         <m.FindWrap>
-          <m.FindWrapLogo>PAWSITIVE</m.FindWrapLogo>
+          <m.FindWrapLogo>나와 닮은 강아지는?</m.FindWrapLogo>
           <m.FixWrap>
             <m.WebcamContainer id="webcam-container" />
             <m.BarContainer>
@@ -165,11 +171,12 @@ const MainContainer = () => {
             <m.LabelContainer id="label-container" />
           </m.FixWrap>
           <m.ActionButtons>
-            <m.CaptureButton onClick={stop}>촬영하기</m.CaptureButton>
-            <m.NextButton onClick={handleNextButtonClick}>
+            <m.CaptureButton onClick={onClickCamera}>촬영하기</m.CaptureButton>
+            <m.NextButton onClick={handleNextButtonClick} disabled={!check}>
               결과화면보기
             </m.NextButton>
           </m.ActionButtons>
+          <m.SmallDesc>*촬영하기 버튼을 먼저 눌러주세요!</m.SmallDesc>
         </m.FindWrap>
       ) : (
         <m.DefaultWrap>

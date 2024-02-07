@@ -54,6 +54,10 @@ export const NextButton = styled.button`
   font-size: 17px;
   font-weight: normal;
   color: #ffffff;
+
+  &:disabled {
+    background-color: #bebebe;
+  }
 `;
 
 export const StartButton = styled.button`
@@ -64,6 +68,11 @@ export const StartButton = styled.button`
   color: #ff9232;
   width: 100%;
   margin-top: 40px;
+`;
+
+export const SmallDesc = styled.div`
+  color: #a9a9a9;
+  margin-top: 10px;
 `;
 
 export const DefaultWrap = styled.div`
