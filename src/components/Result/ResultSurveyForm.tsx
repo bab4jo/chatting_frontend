@@ -21,8 +21,11 @@ const ResultSurveyForm = () => {
           q3: a3,
           q4: a4,
           q5: a5,
+          participant: name,
         })
-        .then((res) => () => navigate("/info"))
+        .then((res) => {
+          navigate("/info");
+        })
         .catch((error) => alert("에러가 발생하였습니다."));
     } else {
       alert("설문을 완료해주세요!");
@@ -188,7 +191,7 @@ const ResultSurveyForm = () => {
           />
           어느 정도 복잡하다고 생각함
         </label>
-        <label htmlFor="q33">
+        <label htmlFor="q43">
           <input
             type="radio"
             id="q43"

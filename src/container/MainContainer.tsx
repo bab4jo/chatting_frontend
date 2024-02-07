@@ -162,7 +162,7 @@ const MainContainer = () => {
     <m.Container>
       {started ? (
         <m.FindWrap>
-          <m.FindWrapLogo>나와 닮은 강아지는?</m.FindWrapLogo>
+          <m.FindWrapLogo>나와 닮은 강아지는요?</m.FindWrapLogo>
           <m.FixWrap>
             <m.WebcamContainer id="webcam-container" />
             <m.BarContainer>

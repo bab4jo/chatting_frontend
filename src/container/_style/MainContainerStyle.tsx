@@ -100,7 +100,7 @@ export const FindWrap = styled.div`
 export const FindWrapLogo = styled.div`
   color: #ff9232;
   font-weight: 600;
-  font-size: 2em;
+  font-size: 1.6em;
   margin-bottom: 20px;
 `;
 
