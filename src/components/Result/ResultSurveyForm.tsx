@@ -1,8 +1,10 @@
 import * as r from "../Result/_style/ResultSurveyFormStyle";
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 const ResultSurveyForm = () => {
+  const navigate = useNavigate();
   const [a1, setA1] = useState<number>(0);
   const [a2, setA2] = useState<number>(0);
   const [a3, setA3] = useState<number>(0);
@@ -11,17 +13,20 @@ const ResultSurveyForm = () => {
   const [name, setName] = useState<string>("");
 
   const submitSurvey = () => {
-    console.log(a1, a2, a3, a4, a5);
-    axios
-      .post("https://i10c111.p.ssafy.io/api/v1/surveys", {
-        q1: a1,
-        q2: a2,
-        q3: a3,
-        q4: a4,
-        q5: a5,
-      })
-      .then((res) => console.log("제출 성공", res))
-      .catch((error) => console.log("error: ", error));
+    if (a1 !== 0 && a2 !== 0 && a3 !== 0 && a4 !== 0 && a5 !== 0) {
+      axios
+        .post("https://i10c111.p.ssafy.io/api/v1/surveys", {
+          q1: a1,
+          q2: a2,
+          q3: a3,
+          q4: a4,
+          q5: a5,
+        })
+        .then((res) => () => navigate("/info"))
+        .catch((error) => alert("에러가 발생하였습니다."));
+    } else {
+      alert("설문을 완료해주세요!");
+    }
   };
 
   return (
