@@ -7,6 +7,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 
 const AuthRoutes = () => (
     <Routes>
+        <Route path="/" element={<ChattingContainer/>}/>
       <Route path="/chat" element={<ChattingContainer/>}/>
       <Route path="/chat/:no" element={<ChattingRoomContainer/>}/>
     </Routes>
