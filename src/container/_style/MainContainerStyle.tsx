@@ -4,19 +4,32 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  height: 100vh;
 `;
 
 export const WebcamContainer = styled.div`
-  margin-bottom: 60px;
+  margin-top: 40px;
+  height: 340px;
 
   canvas {
     border-radius: 100%;
   }
 `;
 
+export const FixWrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+`;
+
 export const BarContainer = styled.div`
-  width: 300px;
+  margin-top: 20px;
   margin-bottom: 10px;
+  width: 300px;
+  height: 250px;
 `;
 
 export const LabelContainer = styled.div`
@@ -60,14 +73,11 @@ export const NextButton = styled.button`
   }
 `;
 
-export const StartButton = styled.button`
-  margin-bottom: 10px;
-  padding: 10px;
-  font-size: 16px;
-  background-color: #fff3e9;
-  color: #ff9232;
+export const DoneWrap = styled.div`
+  display: flex;
   width: 100%;
-  margin-top: 40px;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const SmallDesc = styled.div`
@@ -75,38 +85,47 @@ export const SmallDesc = styled.div`
   margin-top: 10px;
 `;
 
-export const DefaultWrap = styled.div`
+export const BackButtonWrap = styled.div`
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+
+  img {
+    width: 10px;
+  }
+`;
+
+export const PrevWrap = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  width: 90%;
   height: 100vh;
-`;
-
-export const Logo = styled.div`
-  color: #ff9232;
-  font-weight: 600;
-  font-size: 2.6em;
-`;
-
-export const FindWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
   align-items: center;
 `;
 
-export const FindWrapLogo = styled.div`
-  color: #ff9232;
-  font-weight: 600;
-  font-size: 1.6em;
-  margin-bottom: 20px;
+export const PrevImg = styled.img`
+  width: 180px;
+  height: 180px;
+  margin-top: 50%;
 `;
 
-export const FixWrap = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 520px;
+export const PrevTitle = styled.div`
+  font-weight: 500;
+  font-size: 1.3em;
+  margin-top: 30px;
+`;
+
+export const PrevDesc = styled.div`
+  color: #848484;
+  margin-top: 20px;
+  font-size: 1em;
+`;
+
+export const StartButton = styled.button`
+  height: 40px;
+  color: #fff;
+  margin-top: auto;
+  margin-bottom: 40px;
+  width: 100%;
+  background-color: #ff9232;
 `;

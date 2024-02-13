@@ -11,7 +11,7 @@ import {
   Tooltip,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import * as m from "./_style/MainContainerStyle";
+import * as f from "./_style/MainContainerStyle";
 
 ChartJS.register(
   CategoryScale,
@@ -22,7 +22,8 @@ ChartJS.register(
   Legend,
 );
 
-const MainContainer = () => {
+const FindSimilarDog = () => {
+  const navigate = useNavigate();
   const URL = "https://teachablemachine.withgoogle.com/models/EYgf6bU6pf/";
 
   let model: tmImage.CustomMobileNet | null = null;
@@ -40,7 +41,7 @@ const MainContainer = () => {
   >([]);
   const [check, setCheck] = useState<boolean>(false);
 
-  const navigate = useNavigate();
+  // 페이지 이동 버튼
   const handleNextButtonClick = () => {
     navigate("/result", { state: { resultData } });
   };
@@ -103,7 +104,7 @@ const MainContainer = () => {
     maxPredictions = model.getTotalClasses();
 
     const flip = true;
-    webcam = new tmImage.Webcam(240, 240, flip);
+    webcam = new tmImage.Webcam(260, 260, flip);
     await webcam.setup();
     await webcam.play();
     isPredictingRef.current = true;
@@ -121,14 +122,12 @@ const MainContainer = () => {
     }
   }
 
-  // 실시간 예측결과 중 최댓값 추출
-  const maxProbability: number = Math.max(...chartData);
+  const maxProbability = Math.max(...chartData);
   const backgroundColors = chartData.map((probability) =>
     probability === maxProbability
       ? "rgba(255, 146, 50, 0.8)"
       : "rgba(241, 242, 246, 0.8)",
   );
-
   const data = {
     labels,
     datasets: [
@@ -139,16 +138,45 @@ const MainContainer = () => {
         backgroundColor: backgroundColors,
         barThickness: 40,
         borderRadius: 10,
+        cutcout: "90%",
+        images: [
+          "/img/img_maltese.png",
+          "/img/img_bichon.png",
+          "/img/img_chihuahua.png",
+          "/img/img_poodle.png",
+          "/img/img_retriever.png",
+        ],
       },
     ],
   };
+
+  const bgImage = {
+    id: "bgImage",
+    beforeDatasetDraw(chart: ChartJS): boolean | void {
+      const { ctx } = chart;
+
+      if (chart.getDatasetMeta(0).data[0]) {
+        data.datasets[0].images.forEach((_: string, index: number) => {
+          const xPos = chart.getDatasetMeta(0).data[index].x;
+          const yPos = chart.getDatasetMeta(0).data[index].y;
+          const chartImage = new Image();
+          chartImage.src = data.datasets[0].images[index];
+
+          ctx.drawImage(chartImage, xPos - 20, yPos - 50, 40, 40);
+        });
+      }
+    },
+  };
+
   const options = {
+    maintainAspectRatio: false,
     scales: {
       x: {
         display: false,
       },
       y: {
         display: false,
+        grace: "50%",
       },
     },
     plugins: {
@@ -159,32 +187,30 @@ const MainContainer = () => {
   };
 
   return (
-    <m.Container>
+    <f.Container>
       {started ? (
-        <m.FindWrap>
-          <m.FindWrapLogo>나와 닮은 강아지는요?</m.FindWrapLogo>
-          <m.FixWrap>
-            <m.WebcamContainer id="webcam-container" />
-            <m.BarContainer>
-              <Bar data={data} options={options} />
-            </m.BarContainer>
-            <m.LabelContainer id="label-container" />
-          </m.FixWrap>
-          <m.ActionButtons>
-            <m.CaptureButton onClick={onClickCamera}>촬영하기</m.CaptureButton>
-            <m.NextButton onClick={handleNextButtonClick} disabled={!check}>
+        <f.DoneWrap>
+          <f.FixWrap>
+            <f.WebcamContainer id="webcam-container" />
+            <f.BarContainer>
+              <Bar data={data} options={options} plugins={[bgImage]} />
+            </f.BarContainer>
+            <f.LabelContainer id="label-container" />
+          </f.FixWrap>
+          <f.ActionButtons>
+            <f.CaptureButton onClick={onClickCamera}>촬영하기</f.CaptureButton>
+            <f.NextButton onClick={handleNextButtonClick} disabled={!check}>
               결과화면보기
-            </m.NextButton>
-          </m.ActionButtons>
-          <m.SmallDesc>*촬영하기 버튼을 먼저 눌러주세요!</m.SmallDesc>
-        </m.FindWrap>
+            </f.NextButton>
+          </f.ActionButtons>
+          <f.SmallDesc>*촬영하기 버튼을 먼저 눌러주세요!</f.SmallDesc>
+        </f.DoneWrap>
       ) : (
-        <m.DefaultWrap>
-          <m.Logo>
-            나와 닮은 <br />
-            강아지 찾기!
-          </m.Logo>
-          <m.StartButton
+        <f.PrevWrap>
+          <f.PrevImg src="/img/img_main_house.png" alt="" />
+          <f.PrevTitle>나와 어떤 강아지상일까?</f.PrevTitle>
+          <f.PrevDesc>얼굴로 보는 인공지능 강아지상 테스트</f.PrevDesc>
+          <f.StartButton
             type="button"
             onClick={() => {
               setStarted(true);
@@ -192,11 +218,11 @@ const MainContainer = () => {
             }}
           >
             시작하기
-          </m.StartButton>
-        </m.DefaultWrap>
+          </f.StartButton>
+        </f.PrevWrap>
       )}
-    </m.Container>
+    </f.Container>
   );
 };
 
-export default MainContainer;
+export default FindSimilarDog;
