@@ -74,9 +74,7 @@ const ResultSurveyForm = () => {
         </label>
       </r.AnswerWrap>
 
-      <r.Question>
-        2. (1번 1,2 선택) 왜 유기동물 보호소는 선호하지 않으시나요?
-      </r.Question>
+      <r.Question>2. 왜 유기동물 보호소는 선호하지 않으시나요?</r.Question>
       <r.AnswerWrap>
         <label htmlFor="q21">
           <input
@@ -121,8 +119,7 @@ const ResultSurveyForm = () => {
       </r.AnswerWrap>
 
       <r.Question>
-        3. (1번 3 선택) 유기동물 보호소에서의 입양 절차에 대해 어느 정도 알고
-        계신가요?
+        3. 유기동물 보호소에서의 입양 절차에 대해 어느 정도 알고 계신가요?
       </r.Question>
       <r.AnswerWrap>
         <label htmlFor="q31">
@@ -167,9 +164,7 @@ const ResultSurveyForm = () => {
         </label>
       </r.AnswerWrap>
 
-      <r.Question>
-        4. (3번 1, 2 선택) 입양 절차의 복잡도에 대해 어떻게 생각하시나요?
-      </r.Question>
+      <r.Question>4. 입양 절차의 복잡도에 대해 어떻게 생각하시나요?</r.Question>
       <r.AnswerWrap>
         <label htmlFor="q41">
           <input
@@ -214,8 +209,7 @@ const ResultSurveyForm = () => {
       </r.AnswerWrap>
 
       <r.Question>
-        5. (공통) 유기견을 입양한 사람들의 이야기들에 대해서 어떻게
-        생각하시나요?
+        5. 유기견을 입양한 사람들의 이야기들에 대해서 어떻게 생각하시나요?
       </r.Question>
       <r.AnswerWrap>
         <label htmlFor="q51">

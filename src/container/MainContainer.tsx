@@ -12,6 +12,7 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import * as f from "./_style/MainContainerStyle";
+import { Logo } from "./_style/MainContainerStyle";
 
 ChartJS.register(
   CategoryScale,
@@ -41,7 +42,6 @@ const FindSimilarDog = () => {
   >([]);
   const [check, setCheck] = useState<boolean>(false);
 
-  // 페이지 이동 버튼
   const handleNextButtonClick = () => {
     navigate("/result", { state: { resultData } });
   };
@@ -188,6 +188,7 @@ const FindSimilarDog = () => {
 
   return (
     <f.Container>
+      <f.Logo src="/img/img_pawsitive_logo.png" alt="/" />
       {started ? (
         <f.DoneWrap>
           <f.FixWrap>
@@ -210,6 +211,10 @@ const FindSimilarDog = () => {
           <f.PrevImg src="/img/img_main_house.png" alt="" />
           <f.PrevTitle>나와 어떤 강아지상일까?</f.PrevTitle>
           <f.PrevDesc>얼굴로 보는 인공지능 강아지상 테스트</f.PrevDesc>
+          <f.Span>
+            * 카메라 로딩이 오래걸릴수도 있어요! <br />
+            pawsitive한 마음으로 기다려 주세요 :)
+          </f.Span>
           <f.StartButton
             type="button"
             onClick={() => {

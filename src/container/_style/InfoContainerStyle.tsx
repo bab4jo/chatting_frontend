@@ -41,6 +41,7 @@ export const LogoText = styled.div`
 
 export const Image = styled.img`
   width: 300px;
+  height: 330px;
   margin: 0 auto;
 `;
 

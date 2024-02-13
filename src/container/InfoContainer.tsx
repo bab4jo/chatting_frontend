@@ -15,7 +15,7 @@ const InfoContainer = () => {
         <i.Image src="/img/Group%20215.png" alt="" />
         <i.Logo>Coming soon...</i.Logo>
         <i.BottomWrap>
-          <div>[포지티버의 주요 기능]</div>
+          <div>[pawsitive 의 주요 기능]</div>
           <div>일관화되고 편리한 입양 절차</div>
           <div>나에게 딱 맞는 유기견 추천 서비스</div>
           <div>행동 및 건강상태에 따른 맞춤형 교육 컨텐츠 제공</div>

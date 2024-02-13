@@ -1,12 +1,17 @@
 import styled from "styled-components";
+import exp from "node:constants";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 20px auto;
   height: 100vh;
+`;
+
+export const Logo = styled.img`
+  width: 30%;
 `;
 
 export const WebcamContainer = styled.div`
@@ -85,16 +90,6 @@ export const SmallDesc = styled.div`
   margin-top: 10px;
 `;
 
-export const BackButtonWrap = styled.div`
-  display: flex;
-  width: 100%;
-  margin-top: 40px;
-
-  img {
-    width: 10px;
-  }
-`;
-
 export const PrevWrap = styled.div`
   display: flex;
   flex-direction: column;
@@ -124,8 +119,15 @@ export const PrevDesc = styled.div`
 export const StartButton = styled.button`
   height: 40px;
   color: #fff;
-  margin-top: auto;
   margin-bottom: 40px;
   width: 100%;
   background-color: #ff9232;
+`;
+
+export const Span = styled.div`
+  margin-top: auto;
+  margin-bottom: 10px;
+  color: #848484;
+  line-height: 1.3;
+  font-size: 0.8em;
 `;

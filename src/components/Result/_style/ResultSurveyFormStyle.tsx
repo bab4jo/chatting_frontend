@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto 0;
 `;
 
 export const SubTitle = styled.div`
@@ -21,7 +21,8 @@ export const Title = styled.div`
 
 export const Question = styled.div`
   margin-bottom: 10px;
-  line-height: 1.1;
+  line-height: 1.6;
+  font-weight: 500;
 `;
 
 export const AnswerWrap = styled.div`
@@ -30,7 +31,7 @@ export const AnswerWrap = styled.div`
   margin-bottom: 40px;
 
   label {
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 `;
 
