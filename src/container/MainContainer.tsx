@@ -12,7 +12,6 @@ import {
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
 import * as f from "./_style/MainContainerStyle";
-import { Logo } from "./_style/MainContainerStyle";
 
 ChartJS.register(
   CategoryScale,
@@ -188,7 +187,10 @@ const FindSimilarDog = () => {
 
   return (
     <f.Container>
-      <f.Logo src="/img/img_pawsitive_logo.png" alt="/" />
+      <f.LogoWrap>
+        <img src="/img/img_pawsitive_logo.png" alt="/" />
+      </f.LogoWrap>
+
       {started ? (
         <f.DoneWrap>
           <f.FixWrap>

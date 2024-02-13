@@ -1,23 +1,26 @@
 import styled from "styled-components";
-import exp from "node:constants";
 
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 90%;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding: 10% 0;
   height: 100vh;
 `;
 
-export const Logo = styled.img`
-  width: 30%;
+export const LogoWrap = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  img {
+    width: 30%;
+  }
 `;
 
 export const WebcamContainer = styled.div`
-  margin-top: 40px;
-  height: 340px;
-
+  margin-top: 10%;
   canvas {
     border-radius: 100%;
   }
@@ -27,7 +30,6 @@ export const FixWrap = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 600px;
 `;
 
 export const BarContainer = styled.div`
@@ -94,8 +96,8 @@ export const PrevWrap = styled.div`
   display: flex;
   flex-direction: column;
   width: 90%;
-  height: 100vh;
   align-items: center;
+  height: 100%;
 `;
 
 export const PrevImg = styled.img`
