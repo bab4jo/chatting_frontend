@@ -215,10 +215,10 @@ const FindSimilarDog = () => {
       ) : (
         <f.PrevWrap>
           <f.PrevImg src="/img/img_main_house.png" alt="" />
-          <f.PrevTitle>나와 어떤 강아지상일까?</f.PrevTitle>
-          <f.PrevDesc>얼굴로 보는 인공지능 강아지상 테스트</f.PrevDesc>
+          <f.PrevTitle>나는 어떤 강아지상일까?</f.PrevTitle>
+          <f.PrevDesc>얼굴로 인식하는 인공지능 강아지상 테스트</f.PrevDesc>
           <f.Span>
-            시작 후, 카메라 로딩이 오래걸릴수도 있어요! <br />
+            시작 후, 카메라 로딩에 다소 시간이 걸릴 수도 있어요! <br />
             pawsitive한 마음으로 조금만 기다려 주세요 :)
           </f.Span>
           <f.StartButton

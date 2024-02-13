@@ -35,11 +35,11 @@ const ResultSurveyForm = () => {
   return (
     <r.Container>
       <r.SubTitle>5초 설문 하기</r.SubTitle>
-      <r.Title>설문완료 후 프로젝트에 기여해보세요!</r.Title>
+      <r.Title>여러분의 소중한 의견을 전달해주세요!</r.Title>
 
       <r.Question>
-        1. 만약 반려견을 키우기로 마음을 먹으셨다면, 어떠한 방법으로 아이를
-        데려오고 싶으신가요?
+        1. 만약 반려견을 키우기로 결심하셨다면, 어떤 방법으로 반려견을 입양하고
+        싶으신가요?
       </r.Question>
       <r.AnswerWrap>
         <label htmlFor="q11">
@@ -74,7 +74,9 @@ const ResultSurveyForm = () => {
         </label>
       </r.AnswerWrap>
 
-      <r.Question>2. 왜 유기동물 보호소는 선호하지 않으시나요?</r.Question>
+      <r.Question>
+        2. 유기동물 보호소를 선호하지 않는 이유는 무엇인가요?
+      </r.Question>
       <r.AnswerWrap>
         <label htmlFor="q21">
           <input
@@ -119,7 +121,7 @@ const ResultSurveyForm = () => {
       </r.AnswerWrap>
 
       <r.Question>
-        3. 유기동물 보호소에서의 입양 절차에 대해 어느 정도 알고 계신가요?
+        3. 유기동물 보호소의 입양 절차에 대해 어느 정도 알고 계신가요?
       </r.Question>
       <r.AnswerWrap>
         <label htmlFor="q31">
@@ -209,7 +211,7 @@ const ResultSurveyForm = () => {
       </r.AnswerWrap>
 
       <r.Question>
-        5. 유기견을 입양한 사람들의 이야기들에 대해서 어떻게 생각하시나요?
+        5. 유기견을 입양한 사람들의 이야기에 대해 어떻게 생각하시나요?
       </r.Question>
       <r.AnswerWrap>
         <label htmlFor="q51">
@@ -253,11 +255,11 @@ const ResultSurveyForm = () => {
           관심 없음
         </label>
       </r.AnswerWrap>
-      <r.Question>6. 메타모스트 아이디를 입력해주세요</r.Question>
+      <r.Question>6. Mattermost 아이디를 입력해주세요</r.Question>
       <r.Input
         value={name}
         onChange={(e) => setName(e.target.value)}
-        placeholder="ㅇㅇㅇ[광주_1반_C111]"
+        placeholder="이승현 [광주_1반_C111]"
       />
       <r.Button type="button" onClick={submitSurvey}>
         설문 제출하기
