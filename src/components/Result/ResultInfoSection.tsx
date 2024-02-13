@@ -4,6 +4,7 @@ import { useLocation } from "react-router-dom";
 const ResultInfoSection = () => {
   const location = useLocation();
   const { resultData } = location.state;
+
   const sortedResultData = [...resultData].sort(
     (a, b) => b.probability - a.probability,
   );

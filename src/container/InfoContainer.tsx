@@ -15,12 +15,13 @@ const InfoContainer = () => {
         <i.Image src="/img/Group%20215.png" alt="" />
         <i.Logo>Coming soon!</i.Logo>
         <i.BottomWrap>
-          <div>[pawsitive 의 주요 기능]</div>
+          <div>저희 pawsitive는</div>
           <div>일관화되고 편리한 입양 절차</div>
           <div>나에게 딱 맞는 유기견 추천 서비스</div>
           <div>행동 및 건강상태에 따른 맞춤형 교육 컨텐츠 제공</div>
           <div>입양인들을 위한 기록 및 공유 서비스</div>
         </i.BottomWrap>
+        <div>공유 서비스는 조만간 가능합니다.</div>
         <i.Button type="button" onClick={goMain}>
           처음으로
         </i.Button>
