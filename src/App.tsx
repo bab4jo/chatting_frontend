@@ -12,21 +12,23 @@ import InfoContainer from "./container/InfoContainer";
 const userAgent: string = navigator.userAgent;
 
 // 특정한 문자열을 검색하여 기기를 확인할 수 있습니다.
-if (userAgent.match(/Android/i)) {
-  console.log("Android 기기로 접속했습니다.");
-} else if (userAgent.match(/iPhone|iPad|iPod/i)) {
-  console.log("iOS 기기로 접속했습니다.");
-} else if (userAgent.match(/Windows/i)) {
-  console.log("Windows 기기로 접속했습니다.");
-} else if (userAgent.match(/Mac/i)) {
-  console.log("Mac 기기로 접속했습니다.");
-} else {
-  console.log("기타 기기 또는 브라우저로 접속했습니다.");
-}
+// if (userAgent.match(/Android/i)) {
+//   console.log("Android 기기로 접속했습니다.");
+// } else if (userAgent.match(/iPhone|iPad|iPod/i)) {
+//   console.log("iOS 기기로 접속했습니다.");
+// } else if (userAgent.match(/Windows/i)) {
+//   console.log("Windows 기기로 접속했습니다.");
+// } else if (userAgent.match(/Mac/i)) {
+//   console.log("Mac 기기로 접속했습니다.");
+// } else {
+//   console.log("기타 기기 또는 브라우저로 접속했습니다.");
+// }
 
 if (userAgent.match(/iPhone|iPad|iPod/i) || userAgent.match(/Mac/i)) {
-  alert("iOS 또는 Mac 기기로의 접근은 준비중입니다.");
-  // window.location.href = "/restricted-access-page";
+  alert(
+    "iOS 또는 Mac 기기로의 사용은 준비중입니다. 다른 브라우저로 접근해주세요.",
+  );
+  window.location.href = "/info";
 }
 
 const AuthRoutes = () => (
