@@ -1,46 +1,10 @@
-# Getting Started with Create React App
+# 1단계
+| 홈 | 입양절차 | 펫과사전 | 펫과사전 |
+| --- | --- | --- | --- |
+| ![Group_2](/uploads/2bcdb2f1cefcb652ad8ce637efbe4baf/Group_2.png) | ![Group_26](/uploads/6e85b3978f563875342088b8e7ce2d0f/Group_26.png) | ![Group_28](/uploads/714de253083524f8f403dce177f5112f/Group_28.png) | ![Group_30](/uploads/ce16535a33be21c81b710309495f416f/Group_30.png) |
+| - 홈 화면 | - <입양 단계 안내> 카드를 눌러 입양 단계 안내 페이지로 이동합니다 | - 홈 화면 오른쪽 위에 있는 아이콘을 눌러 펫과사전 페이지로 이동합니다 | - 카테고리 검색이 가능합니다. |
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+| 펫과사전 상세 | 포지티버 | | |
+| --- | --- | --- | --- |
+| ![Group_32](/uploads/058f81f49b2622200cbb23d2f0c7cca5/Group_32.png) | ![Group_33](/uploads/6c26f011aa4bcfed6ad89d54cf4888ff/Group_33.png) | ![Group_53](/uploads/b3fa8095ca0cc7e7971709a6e15ac4d6/Group_53.png) | ![Group_53](/uploads/b3fa8095ca0cc7e7971709a6e15ac4d6/Group_53.png) |
+| - 펫과사전 상세 페이지로 이동합니다 | - 홈 화면의 <포지티버가 되어 볼까요> 카드를 눌러 포지티버 페이지로 이동합니다 <br/> - [준비됐어요!] 버튼을 눌러 다음 단계로 넘어갑니다 |  |  |
